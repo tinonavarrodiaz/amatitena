@@ -1,0 +1,60 @@
+---
+import Scroll from '@/components/Scroll.astro';
+import Agave from '@/components/icons/Agave.astro';
+---
+
+<section
+  class="relative w-fvw h-fvh flex flex-col items-center justify-center text-text px-6"
+  id="about-us"
+>
+  <div data-aos="zoom-in">
+    <Agave
+      class="size-[90px] md:size-[100px] 2xl:size-[6.46047vw] mb-6 lg:mb-[3.6458vw]"
+    />
+  </div>
+  <p
+    class="text-center tracking-[3px] leading-[1.3em] text-[1.5em] lg:text-[3.125vw]"
+    data-aos="fade-left"
+  >
+    A truly artisanal work, produced with tradition. <br />
+    From the tahona to your home table, enjoying <br />
+    Amatitena goes beyond the palate. It's about <br />
+    understanding our history, processes, and <br />
+    appreciating our roots.
+  </p>
+  <Scroll
+    id="next"
+    href="#about-us1"
+    className="bottom-20 lg:bottom-16 hidden"
+  />
+  <Scroll id="prev" href="#Home" className="top-24 hidden" />
+</section>
+<style>
+  br {
+    @apply hidden md:block;
+  }
+</style>
+<!-- <script>
+  const section = document.getElementById('about-us') as HTMLElement;
+  const prev = section?.querySelector('.prev') as HTMLAnchorElement;
+  const next = section?.querySelector('.next') as HTMLAnchorElement;
+  section.addEventListener('wheel', (e) => {
+    if (e.deltaY < 0) {
+      prev?.click();
+    } else {
+      next?.click();
+    }
+  });
+  //@ts-ignore
+  const mc = new Hammer(section);
+  //@ts-ignore
+  mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  mc.on('panup pandown', (e: any) => {
+    // console.log(e.deltaY);
+    if (e.deltaY > 0) {
+      prev?.click();
+    } else {
+      next?.click();
+    }
+  });
+</script> -->

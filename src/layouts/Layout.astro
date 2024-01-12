@@ -1,0 +1,79 @@
+---
+import 'hamburgers/dist/hamburgers.min.css';
+import 'aos/dist/aos.css';
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="w-full bg-[#FFFCF6]">
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: 'Baskerville';
+    src:
+      url('/fonts/Baskerville.woff2') format('woff2'),
+      url('/fonts/Baskerville.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Agenda';
+    src:
+      url('/fonts/Agenda-Light.woff2') format('woff2'),
+      url('/fonts/Agenda-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Trueno';
+    src:
+      url('/fonts/TruenoRg.woff2') format('woff2'),
+      url('/fonts/TruenoRg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    scroll-behavior: smooth;
+  }
+  html,
+  body {
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+  br {
+    @apply hidden lg:block;
+  }
+</style>
+<script>
+  import AOS from 'aos';
+  import { isMobile } from '../functions/is-mobile.ts';
+  AOS.init({
+    // disable: 'phone',
+    startEvent: 'load',
+    easing: 'ease-out-back',
+    duration: 850,
+    delay: 150,
+    // startEvent: 'DOMContentLoaded',
+    useClassNames: true,
+  });
+
+  console.log(isMobile());
+</script>

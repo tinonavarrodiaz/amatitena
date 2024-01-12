@@ -1,0 +1,38 @@
+---
+import Header from '@/components/Header.astro';
+import Scroll from '@/components/Scroll.astro';
+---
+
+<section
+  class="w-full h-fvh relative flex flex-col justify-center items-center text-header"
+  id="Home"
+>
+  <Header />
+  <img
+    src="/img/land-100.webp"
+    class="absolute w-full
+    h-full
+    object-cover
+   scrollt-center z-0"
+    -z-10
+    alt="Land"
+  />
+  <p
+    class="uppercase text-center text-8 lg:text-[1.5625vw] tracking-[4px] relative z-1 text-current"
+  >
+    Discover<br />
+    Amatiteña
+  </p>
+  <Scroll
+    id="next"
+    href="#about-us"
+    className="bottom-20 lg:bottom-16 hidden"
+  />
+</section>
+<style lang="scss">
+  p {
+    &::after {
+      @apply content-[''] absolute block top-[150%] left-[50%] h-[38vh] w-[1px] bg-current;
+    }
+  }
+</style>

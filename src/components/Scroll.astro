@@ -1,0 +1,30 @@
+---
+import Down from './icons/Down.astro';
+import Up from './icons/Up.astro';
+interface Props {
+  className: string;
+  id: string;
+  href: string;
+}
+const { className, href, id }: Props = Astro.props;
+---
+
+<a
+  data-id=`${id}`
+  href=`${href}`
+  class=`absolute block flex flex-col text-center items-center justify-center hover:scale-110 transition-all duration-200 ${className} ${id}`
+>
+  {
+    id === 'next' ? (
+      <>
+        <span class="!mb-0 !text-sm">SCROLL</span>
+        <Down class="size-5" />
+      </>
+    ) : (
+      <>
+        <Up class="size-5" />
+        <span class="!mb-0 !text-sm">SCROLL</span>
+      </>
+    )
+  }
+</a>

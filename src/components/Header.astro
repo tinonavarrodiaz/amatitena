@@ -1,0 +1,40 @@
+---
+import Menu from './Menu.astro';
+import Logo from '@/components/icons/Logo.astro';
+---
+
+<header
+  class="absolute top-0 left-0 z-50 w-full h-[75px] lg:h-[5.78vw] px-6 lg:pl-[4.57vw] lg:pr-0 border-b text-header border-header flex items-center justify-between"
+  id="Header"
+>
+  <a href="#Home" class="w-[150px]">
+    <Logo />
+  </a>
+  <Menu />
+</header>
+<style>
+  .sticky {
+    @apply fixed w-full top-0 left-0;
+    &.bg {
+      @apply bg-bgWhite text-text;
+    }
+  }
+</style>
+<!-- <script>
+  const header = document.getElementById('Header') as any;
+  const windowInnerHeight = window.innerHeight;
+  let headerOffSetTop = header.parentElement.offsetTop;
+
+  window.addEventListener('scroll', (e) => {
+    if (window.scrollY > headerOffSetTop) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+    if (window.scrollY >= headerOffSetTop + windowInnerHeight) {
+      header.classList.add('bg');
+    } else {
+      header.classList.remove('bg');
+    }
+  });
+</script> -->

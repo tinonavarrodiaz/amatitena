@@ -1,0 +1,22 @@
+---
+import Home from '@/sections/Home.astro';
+import Layout from '../layouts/Layout.astro';
+import Start from '@/sections/Start.astro';
+import Aboutus from '@/sections/Aboutus.astro';
+import Aboutus1 from '@/sections/Aboutus1.astro';
+import Separator from '@/components/Separator.astro';
+import Tequilas from '@/sections/Tequilas.astro';
+import Master from '@/sections/Master.astro';
+---
+
+<Layout title="Welcome to Astro.">
+  <Start />
+  <main class="w-full">
+    <Home />
+    <Aboutus />
+    <Aboutus1 />
+    <Separator img="separator.webp" />
+    <Tequilas />
+    <Master />
+  </main>
+</Layout>

@@ -1,0 +1,12 @@
+---
+interface Props {
+  img: string;
+  className?: string;
+}
+
+const { img, className } = Astro.props;
+---
+
+<aside class={`w-full h-auto block ${className}`}>
+  <img src={`/img/${img}`} alt="separator" />
+</aside>

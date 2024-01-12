@@ -1,0 +1,93 @@
+---
+import { menu } from '@/data/menu';
+---
+
+<nav>
+  <button
+    class="hamburger hamburger--squeeze hidden"
+    type="button"
+    id="ToggleBtn"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <ul
+    class="menu absolute font-agenda lg:static top-[75px] left-0 w-full bg-bgGris lg:bg-transparent max-h-0 lg:max-h-none lg:flex"
+    id="Menu"
+  >
+    {
+      menu.map((item) => (
+        <li class="px-4 lg:px-0 lg:h-[5.78vw] lg:flex items-center  relative ">
+          <a class="uppercase block" href={item.link}>
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+<style lang="scss">
+  .hamburger {
+    padding: 0;
+    scale: 0.75;
+    transform: translateY(5px);
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .hamburger:hover,
+  .hamburger.is-active:hover {
+    opacity: 1;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    background-color: currentColor !important;
+  }
+
+  .hamburger.is-active {
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
+      background-color: currentColor;
+    }
+  }
+  .menu {
+    @apply transition-all duration-500 lg:transition-none lg:text-[1.302vw] overflow-hidden lg:overflow-auto text-white lg:text-inherit;
+
+    &.is-active {
+      @apply max-h-[calc(3.5em*4)];
+    }
+    li {
+      @apply lg:px-[1.1693vw] tracking-[2px] leading-10 lg:leading-normal;
+    }
+    li:nth-child(3) {
+      @apply lg:pr-[2.864vw];
+    }
+    li:last-child {
+      @apply lg:px-[2.864vw] relative;
+      &::before {
+        @apply lg:content-[''] lg:absolute block top-0 left-0 bg-header w-[1px] h-[5.78vw] z-20;
+      }
+    }
+  }
+</style>
+
+<script>
+  const toggleBtn = document.getElementById('ToggleBtn') as HTMLButtonElement;
+  const menu = document.getElementById('Menu') as HTMLDListElement;
+  const items = [...menu.querySelectorAll('a')];
+  toggleBtn.addEventListener('click', function () {
+    this.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  });
+  items.forEach((item) => {
+    item.addEventListener('click', function () {
+      toggleBtn.classList.remove('is-active');
+      menu.classList.remove('is-active');
+    });
+  });
+</script>
