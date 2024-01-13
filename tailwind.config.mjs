@@ -13,6 +13,7 @@ export default {
         baskerville: ['Baskerville', 'sanserif'],
         agenda: ['Agenda', 'sanserif'],
         trueno: ['Trueno', 'sanserif'],
+        minion: ['Minion-Variable-Concept', 'sanserif'],
       },
       spacing: {
         fvh: '100vh',

@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
-    "sass": "^1.69.7"
+    "sass": "^1.69.7",
+    "vite-plugin-qrcode": "^0.2.3"
   }
 }
