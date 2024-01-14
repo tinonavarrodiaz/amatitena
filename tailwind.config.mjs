@@ -14,6 +14,7 @@ export default {
         agenda: ['Agenda', 'sanserif'],
         trueno: ['Trueno', 'sanserif'],
         minion: ['Minion-Variable-Concept', 'sanserif'],
+        myriad: ['Myriad Pro', 'sanserif'],
       },
       spacing: {
         fvh: '100vh',
