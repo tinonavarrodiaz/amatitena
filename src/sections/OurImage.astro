@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+  img: string;
+}
+
+const { name, img } = Astro.props;
+---
+
+<section id={img}>
+  <img src={`/img/${img}.webp`} alt={name} />
+  <h2>{name}</h2>
+</section>

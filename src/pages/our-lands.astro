@@ -1,0 +1,11 @@
+---
+import { lands } from '@/data/lands';
+import Layout from '@/layouts/Layout.astro';
+import HomeLands from '@/sections/HomeLands.astro';
+import OurImage from '@/sections/OurImage.astro';
+---
+
+<Layout title="Our Lands">
+  <HomeLands />
+  {lands.map((el) => <OurImage name={el.name} img={el.img} />)}
+</Layout>

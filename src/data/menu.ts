@@ -12,6 +12,10 @@ export const menu = [
     link: '#where-to-buy',
   },
   {
+    title: 'Our lands',
+    link: '/our-lands',
+  },
+  {
     title: 'Contact',
     link: '#contact',
   },
