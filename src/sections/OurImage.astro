@@ -7,7 +7,55 @@ interface Props {
 const { name, img } = Astro.props;
 ---
 
-<section id={img}>
-  <img src={`/img/${img}.webp`} alt={name} />
-  <h2>{name}</h2>
+<section
+  id={img}
+  class="w-fvw aspect-[1920/1080] overflow-hidden relative mb-8 lg:mb-[3.38vw] last:pb-0"
+  data-aos="fade-in"
+  data-aos-duration="1500"
+>
+  <picture
+    class="w-[calc(100%+2px] h-full object-cover object-center translate-x-[-1px] relative block"
+  >
+    <source srcset={`/img/lands/${img}@2x.jpg`} media="(width > 1920px)" />
+    <source
+      srcset={`/img/lands/${img}.jpg`}
+      media="(width <=1920px) and (width>1024px)"
+    />
+    <source
+      srcset={`/img/lands/${img}@m.jpg`}
+      media="(width <=1024px) and (width>768px))"
+    />
+    <source srcset={`/img/lands/${img}@s.jpg`} media="(width < 768px)" />
+    <img src={`/img/lands/${img}.jpg`} alt={name} />
+  </picture>
+  <h2
+    class="land-name absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] fornt-minion text-xl lg:text-[3.125vw] uppercase text-white"
+  >
+    {name}
+  </h2>
 </section>
+<style lang="scss">
+  #palenque {
+    margin-bottom: 0;
+  }
+  section {
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0.5px;
+      height: 42.5%;
+      background-color: rgba(#fff, 0.3);
+      z-index: 100;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::after {
+      top: unset;
+      bottom: 0;
+      height: 41%;
+    }
+  }
+</style>
