@@ -1,0 +1,23 @@
+---
+interface Props {
+  name: string;
+  img: string;
+  class: string;
+}
+
+const { name, img } = Astro.props;
+---
+
+<picture>
+  <source srcset={`/img/bottles/${img}@xl.webp`} media="(width > 1920px)" />
+  <source
+    srcset={`/img/bottles/${img}@l.webp`}
+    media="(width <=1920px) and (width>1024px)"
+  />
+  <source
+    srcset={`/img/bottles/${img}@m.webp`}
+    media="(width <=1024px) and (width>768px))"
+  />
+  <source srcset={`/img/bottles/${img}@s.webp`} media="(width < 768px)" />
+  <img {...Astro.props} src={`/img/bottles/${img}@l.webp`} alt={name} />
+</picture>

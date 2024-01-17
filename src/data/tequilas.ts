@@ -1,23 +1,23 @@
 export const tequilas = [
   {
     name: 'Blanco',
-    img: '/img/Blanco',
+    img: 'Blanco',
     Sheet: '#',
   },
   {
     name: 'Reposado',
-    img: '/img/Reposado',
+    img: 'Reposado',
     Sheet: '#',
   },
   {
     name: 'Blanco',
     name2: 'de Origen',
-    img: '/img/Origen',
+    img: 'Origen',
     sheet: '#',
   },
   {
     name: 'Añejo',
-    img: '/img/Anejo',
+    img: 'Anejo',
     Sheet: '#',
   },
 ];

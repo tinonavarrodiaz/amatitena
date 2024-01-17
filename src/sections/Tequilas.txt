@@ -1,0 +1,46 @@
+---
+import { tequilas } from '@/data/tequilas';
+interface Tequilas {
+  name: string;
+  name2?: string;
+  img: string;
+  sheet: string;
+}
+---
+
+<section
+  class="Tequilas min-h-fvh py-12 lg:pt-[5vw] md:grid grid-cols-2 lg:grid-cols-4 md:px-[12vw] lh:max-h-hvh lg:pb-0 lg:overflow-hidden"
+  id="tequilas"
+>
+  {
+    tequilas.map((tequila, index) => (
+      <figure
+        class="w-full flex flex-col items-center gap-y-5 mb-8 last:mb-0"
+        data-aos="flip-right"
+        data-aos-delay={100 * index}
+      >
+        <img
+          src={`${tequila.img}.webp`}
+          alt={tequila.name}
+          class="w-auto h-[300px] lg:h-[65vh]"
+        />
+        <figcaption class="text-4xl h-[1.5em] flex flex-col justify-center text-[#5A4C4C] font-baskerville">
+          <p class=" mb-[0] leading-[.7]	">{tequila.name}</p>
+          {tequila.name2 && <span>{tequila.name2}</span>}
+        </figcaption>
+        <a
+          class="table font-trueno border border-[#5D6E78] text-[#5D6E78] text-xs lg:text-[0.7291vw] leading-8 px-3 hover:bg-[#5D6E78] hover:text-[#FFFCF6] transition-all duration-300 cursor-pointer"
+          href={tequila.sheet}
+        >
+          Technical Sheet
+        </a>
+      </figure>
+    ))
+  }
+</section>
+<style>
+  p {
+    /* line-height: 0.5; */
+    text-align: center;
+  }
+</style>

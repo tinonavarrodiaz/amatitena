@@ -87,7 +87,7 @@ const { title } = Astro.props;
   import AOS from 'aos';
   import { isMobile } from '../functions/is-mobile.ts';
   AOS.init({
-    // disable: 'phone',
+    disable: true,
     startEvent: 'load',
     easing: 'ease-out-back',
     duration: 850,
