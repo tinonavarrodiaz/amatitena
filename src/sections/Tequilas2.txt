@@ -16,30 +16,29 @@ interface Tequilas {
   250 s
 -->
 <section
-  class="py-12 px-8 grid grid-cols-2 gap-y-8 landscape:grid-cols-4 landscape:max-md:px-4 landscape:md:px-[11vw]
-   landscape:xl:py-[7.708vw]"
+  class="lg:h-[100vh] py-12 s-ls:py-0 mb-0 md:py-0 s-ls:grid gap-y-8 grid-cols-4 items-center lg:px-[11.979vw]"
   id="tequilas"
 >
   {
     tequilas.map((tequila, index) => (
       <div
-        class="flex flex-col items-center "
+        class="flex flex-col items-center mb-12 s-ls:mb-0 last:m-0"
         data-aos="flip-right"
         data-aos-delay={100 * index}
       >
         <ImageTequila
-          class="h-[30vh] landscape:h-[35vw] landscape:lg:h-[70vh] landscape:2xl:h-[44.27vw] landscape:3xl:h-[32vw]  mb-2"
+          class="h-[60vh] s-ls:h-[55vh] mb-0 lg:mb-[.5vw]"
           img={tequila.img}
           name={tequila.name}
         />
         <h2
-          class={` h-[2em] flex flex-col justify-center items-center text-xl s-ls:text-[3.5vw] s-ls:my-[.5em] lg:mt-0 leading-[.8] mb-2 lg-text-[2.60vw] 3xl:text-[2.3vw] lg:mb-[1.666vw]`}
+          class={`font-baskerville h-[2em] flex flex-col justify-center items-center text-3xl s-ls:text-[3.5vw] s-ls:my-[.5em] lg:mt-0 leading-[.8] mb-1 lg-text-[2.60vw] lg:mb-[1.666vw]`}
         >
           {tequila.name}
           {tequila.name2 && <span>{tequila.name2}</span>}
         </h2>
         <a
-          class="table font-trueno border border-[#5D6E78] text-[#5D6E78] text-[10px] lg:text-[0.7291vw] leading-[2.5em]  px-2 hover:bg-[#5D6E78] hover:text-[#FFFCF6] transition-all duration-300 cursor-pointer"
+          class="table font-trueno border border-[#5D6E78] text-[#5D6E78] text-[10px] lg:text-[0.7291vw] leading-8 px-2 hover:bg-[#5D6E78] hover:text-[#FFFCF6] transition-all duration-300 cursor-pointer"
           href={tequila.sheet}
         >
           Technical Sheet

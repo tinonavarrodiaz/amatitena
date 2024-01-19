@@ -1,0 +1,35 @@
+---
+import Agave from '@/components/icons/Agave.astro';
+// import Separator from '@/components/Separator.astro';
+---
+
+<section
+  class="relative h-[100vh] grid grid-rows-[50vh_1fr] lg:grid-rows-1 landscape:md:grid-cols-2 items-center landscape:max-lg:bg-lime-400 landscape:max-lg:items-start landscape:max-lg:block"
+>
+  <div class="h-full lg:h-[calc(100vh-12vh)] grid grid-rows-[1fr_40%]">
+    <div class="bg-[#A4C7D6] flex items-center justify-center">
+      <Agave class="w-20 lg:w-[7.81vw] text-white" />
+    </div>
+    <div
+      class="bg-[#FFFCF6] flex items-center justify-center landscape:max-lg:h-[200px]"
+    >
+      <img src="/img/nom.svg" alt="nom" class="w-[40%] lg:w-[16.40vw]" />
+    </div>
+  </div>
+  <div
+    class="Text bg-[#EEECE2] h-full w-full font-baskerville px-10 text-[4.3vw] tablet:text-[4vw] lg:text-[2.60vw] xl:text-[2vw] 2xl:text-[2.60vw] 3xl:text-[2.1vw] text-center lg:text-left flex items-center justify-center lg:relative z-10 lg:px-[5.20vw] tracking-[3px] landscape:sd:max-lg:h-[100vh]"
+  >
+    <p class="landscape:max-lg:text-[1rem]">
+      Amatiteña is produced by <br /> N0M 1477. Our brand is <br /> inspired by Amatitán,
+      which <br /> means a small village of <br /> Amates, where the cultivation
+      <br /> of agave has been practiced <br /> since the 18th century, due to
+      <br /> its long-standing tradition in <br /> cultivating blue agave for the
+      <br /> production of the spirited <br /> beverage known today as
+      <br class="!block" />
+
+      <span class="italic">Tequila.</span>
+    </p>
+  </div>
+</section>
+
+<style></style>

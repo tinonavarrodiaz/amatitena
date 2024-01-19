@@ -8,12 +8,12 @@ export const menu = [
     link: '#tequilas',
   },
   {
-    title: 'Where to Buy',
-    link: '#where-to-buy',
-  },
-  {
     title: 'Our lands',
     link: '/our-lands',
+  },
+  {
+    title: 'Where to Buy',
+    link: '#where-to-buy',
   },
   {
     title: 'Contact',

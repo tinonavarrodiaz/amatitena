@@ -3,21 +3,21 @@ import Logo from './icons/Logo.astro';
 ---
 
 <footer
-  class="bg-[#2E3B46] px-5 pt-16 lg:pt-[13.80vw] pb-20 lg:pb-[8.17vw] lg:px-[7.812vw] text-[#FEFCF6]"
+  class="bg-[#2E3B46] px-5 pt-16 lg:pt-[11.5vw] pb-20 lg:pb-[8.5vw] lg:px-[7.812vw] text-[#FEFCF6]"
   id="contact"
 >
   <header class="flex justify-between items-center mb-[2.60vw]">
-    <h2 class="font-minion text-[8vw] lg:text-[5.041vw]">
+    <h2 class="font-minion text-[8vw] lg:text-[6.4vw]">
       Contact <i>us</i> today
     </h2>
     <aside
-      class="font-myriad text-[2.5vw] lg:text-[1.3020vw] uppercase underline"
+      class="font-myriad text-[2.5vw] lg:text-[1.3020vw] uppercase underline tracking-[2px]"
     >
       Contact us
     </aside>
   </header>
   <div
-    class="lg:h-[26.04vw] border-t border-b border-current py-[5.20vw] lg:flex justify-between items-start"
+    class="lg:h-[26.04vw] border-t border-b border-opacity-10 border-[rgb(255, 252, 246)] py-[5.20vw] lg:flex justify-between items-start"
   >
     <Logo class="w-[20vw] lg:w-[8.125vw] h-auto block mb-[7vw] lg:mb-0" />
     <div
@@ -29,16 +29,24 @@ import Logo from './icons/Logo.astro';
         >
           About us
         </p>
-        <p class="leading-1 mb-[2.34vw]">
+        <p
+          class="md:max-lg:text-[2.5vw] leading-1 mb-[2.34vw] tracking-[.08em]"
+        >
           Km 32 Carretera <br />
           Guadalajara – Tequila
         </p>
-        <p class="leading-1 mb-[2.34vw]">
+        <p
+          class="md:max-lg:text-[2.5vw] leading-1 mb-[2.34vw] tracking-[.08em]"
+        >
           Monday - Sunday <br />
           9am a 6pm
         </p>
         <p>
-          <a href="mailto:info@sipamatitan.mx">info@sipamatitan.mx</a>
+          <a
+            href="mailto:info@sipamatitan.mx"
+            class="tracking-[.08em] md:max-lg:text-[2.5vw]"
+            >info@sipamatitan.mx</a
+          >
         </p>
       </div>
       <div class="">
@@ -47,7 +55,7 @@ import Logo from './icons/Logo.astro';
         >
           Connect
         </p>
-        <ul class="mb-[3.125vw]">
+        <ul class="mb-[3.125vw] tracking-[.08em] md:max-lg:text-[2.5vw]">
           <li>
             <a href="#" target="_blank">Twitter</a>
           </li>
@@ -63,7 +71,9 @@ import Logo from './icons/Logo.astro';
         >
           Brandbook
         </p>
-        <a href="#" class="underline" download>Download Here</a>
+        <a href="#" class="underline md:max-lg:text-[2.5vw]" download
+          >Download Here</a
+        >
       </div>
     </div>
   </div>

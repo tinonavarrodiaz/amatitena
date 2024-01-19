@@ -7,6 +7,10 @@ interface Props {
 const { img, className } = Astro.props;
 ---
 
-<div class={`w-full h-auto block ${className}`}>
-  <img src={`/img/${img}`} alt="separator" />
+<div class={`block ${className}`}>
+  <img
+    src={`/img/${img}`}
+    alt="separator"
+    class="w-full h-full object-cover object-center"
+  />
 </div>

@@ -3,7 +3,7 @@ import Scroll from '@components/Scroll.astro';
 ---
 
 <section
-  class="Home relative bg-bgGris w-full h-[100vh] flex flex-col justify-center items-center text-white text-center font-baskerville"
+  class="Home relative bg-bgGris w-full h-[100dvh] flex flex-col justify-center items-center text-white text-center font-baskerville px-3"
   id="Start"
 >
   <h1
@@ -14,7 +14,11 @@ import Scroll from '@components/Scroll.astro';
   <span>are the</span>
   <span>Key to</span>
   <h2>Amatiteña</h2>
-  <Scroll id="next" href="#Home" className="bottom-20 lg:bottom-16" />
+  <Scroll
+    id="next"
+    href="#Home"
+    className="bottom-8 landscape:max-lg:bottom-5 lg:bottom-16"
+  />
 </section>
 <style lang="scss">
   .Home {

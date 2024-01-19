@@ -8,6 +8,7 @@ export default {
         s: '360px',
         tablet: '768px',
         laptop: '1100px',
+        '3xl': '1800px',
       },
       colors: {
         bgGris: '#2E3B46',

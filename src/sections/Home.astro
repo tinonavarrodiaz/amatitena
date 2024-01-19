@@ -4,7 +4,7 @@ import Scroll from '@/components/Scroll.astro';
 ---
 
 <section
-  class="w-full h-fvh relative flex flex-col justify-center items-center text-header"
+  class="w-full h-[100dvh] relative flex flex-col justify-center items-center text-header"
   id="Home"
 >
   <Header />
@@ -23,11 +23,7 @@ import Scroll from '@/components/Scroll.astro';
     Discover<br />
     Amatiteña
   </p>
-  <Scroll
-    id="next"
-    href="#about-us"
-    className="bottom-20 lg:bottom-16 hidden"
-  />
+  <Scroll id="next" href="#about-us" className="bottom-8 lg:bottom-16 hidden" />
 </section>
 <style lang="scss">
   p {
