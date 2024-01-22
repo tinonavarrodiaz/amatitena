@@ -1,5 +1,5 @@
 ---
-import { menu } from '@/data/menu';
+import { menu1 } from '@/data/menu1';
 interface Props {
   page?: boolean;
 }
@@ -20,7 +20,7 @@ interface Props {
     id="Menu"
   >
     {
-      menu.map((item) => (
+      menu1.map((item) => (
         <li class="px-4 lg:px-0 lg:h-[5.78vw] lg:flex items-center  relative ">
           <a class="uppercase block" href={item.link}>
             {item.title}

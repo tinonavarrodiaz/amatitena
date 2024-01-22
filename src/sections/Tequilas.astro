@@ -17,7 +17,7 @@ interface Tequilas {
 -->
 <section
   class="py-12 px-8 grid grid-cols-2 gap-y-8 landscape:grid-cols-4 landscape:max-md:px-4 landscape:md:px-[11vw]
-   landscape:xl:py-[7.708vw]"
+   landscape:xl:py-[7.708vw] landscape:2xl:py-[9.708vw] landscape:2xl:pb-[10.708vw]"
   id="tequilas"
 >
   {
@@ -28,12 +28,12 @@ interface Tequilas {
         data-aos-delay={100 * index}
       >
         <ImageTequila
-          class="h-[30vh] landscape:h-[35vw] landscape:lg:h-[70vh] landscape:2xl:h-[44.27vw] landscape:3xl:h-[32vw]  mb-2"
+          class="h-[30vh] landscape:h-[35vw] landscape:lg:h-[70vh] landscape:2xl:h-[43.27vw] landscape:3xl:h-[43.2vw]  mb-2"
           img={tequila.img}
           name={tequila.name}
         />
         <h2
-          class={` h-[2em] flex flex-col justify-center items-center text-xl s-ls:text-[3.5vw] s-ls:my-[.5em] lg:mt-0 leading-[.8] mb-2 lg-text-[2.60vw] 3xl:text-[2.3vw] lg:mb-[1.666vw] min-[1300px]:max-[1400px]:text-[2.5vw]`}
+          class={` h-[2em] font-baskerville flex flex-col justify-center items-center text-xl s-ls:text-[3.5vw] s-ls:my-[.5em] lg:mt-0 leading-[.8] mb-2 lg-text-[2.60vw] 2xl:text-[2.4vw] 3xl:text-[2.3vw] lg:mb-[1.666vw] min-[1300px]:max-[1400px]:text-[2.5vw]`}
         >
           {tequila.name}
           {tequila.name2 && <span>{tequila.name2}</span>}
