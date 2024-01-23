@@ -84,8 +84,10 @@ interface Props {
   const menu = document.getElementById('Menu') as HTMLDListElement;
   const items = [...menu.querySelectorAll('a')];
   toggleBtn.addEventListener('click', function () {
-    this.classList.toggle('is-active');
-    menu.classList.toggle('is-active');
+    // alert('funciona');
+    this.classList.add('is-active');
+    toggleBtn.classList.add('is-active');
+    console.log(menu, this);
   });
   items.forEach((item) => {
     item.addEventListener('click', function () {
