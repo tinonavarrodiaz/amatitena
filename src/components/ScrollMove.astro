@@ -1,6 +1,11 @@
 ---
 import Down from './icons/Down.astro';
 import Up from './icons/Up.astro';
+interface Props {
+  className: string;
+}
+
+const { className } = Astro.props;
 ---
 
 <aside
@@ -15,6 +20,9 @@ import Up from './icons/Up.astro';
   #scrollIndicator.show {
     visibility: visible;
     opacity: 0.7;
+  }
+  #scrollIndicator.lands {
+    @apply text-white;
   }
   span {
     --size: 40px;
@@ -46,9 +54,13 @@ import Up from './icons/Up.astro';
 <script>
   const innerHeight = window.innerHeight;
   const scrollIndicator = document.getElementById('scrollIndicator');
+  const pathname = location.pathname;
+  const scrollA = pathname === '/our-lands' ? 1 : 1.5;
+  console.log(scrollA);
+  console.log(location);
   window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
-    if (scrollPos >= innerHeight * 1.5) {
+    if (scrollPos >= innerHeight * scrollA) {
       scrollIndicator?.classList.add('show');
     } else {
       scrollIndicator?.classList.remove('show');
