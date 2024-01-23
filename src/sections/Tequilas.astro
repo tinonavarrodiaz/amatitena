@@ -9,12 +9,6 @@ interface Tequilas {
 }
 ---
 
-<!--
-  750 xl
-  480 l
-  350 m
-  250 s
--->
 <section
   class="py-12 px-8 grid grid-cols-2 gap-y-8 landscape:grid-cols-4 landscape:max-md:px-4 landscape:md:px-[11vw]
    landscape:xl:py-[7.708vw] landscape:2xl:py-[9.708vw] landscape:2xl:pb-[10.708vw]"
@@ -28,19 +22,21 @@ interface Tequilas {
         data-aos-delay={100 * index}
       >
         <ImageTequila
-          class="h-[30vh] landscape:h-[35vw] landscape:lg:h-[70vh] landscape:2xl:h-[43.27vw] landscape:3xl:h-[43.2vw]  mb-2"
+          class="h-[30vh] landscape:h-[35vw] landscape:lg:h-[55vh] landscape:2xl:h-[35.27vw] landscape:min-[1500px]:h-[35.27vw] landscape:3xl:h-[28.2vw]  mb-2"
           img={tequila.img}
           name={tequila.name}
         />
         <h2
-          class={` h-[2em] font-baskerville flex flex-col justify-center items-center text-xl s-ls:text-[3.5vw] s-ls:my-[.5em] lg:mt-0 leading-[.8] mb-2 lg-text-[2.60vw] 2xl:text-[2.4vw] 3xl:text-[2.3vw] lg:mb-[1.666vw] min-[1300px]:max-[1400px]:text-[2.5vw]`}
+          class={` h-[2em] font-baskerville flex flex-col justify-center items-center text-xl s-ls:text-[3.5vw] s-ls:my-[.5em] lg:mt-0 leading-[.8] mb-2 lg-text-[2vw] 2xl:text-[2.2vw] 3xl:text-[1.8vw] lg:mb-[1.666vw] min-[1300px]:max-[1400px]:text-[1.7vw]`}
         >
           {tequila.name}
           {tequila.name2 && <span>{tequila.name2}</span>}
         </h2>
         <a
           class="table font-trueno border border-[#5D6E78] text-[#5D6E78] text-[10px] lg:text-[0.7291vw] leading-[2.5em]  px-2 hover:bg-[#5D6E78] hover:text-[#FFFCF6] transition-all duration-300 cursor-pointer"
-          href={tequila.sheet}
+          href={tequila.Sheet}
+          target="_blank"
+          download
         >
           Technical Sheet
         </a>

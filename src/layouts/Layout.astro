@@ -1,6 +1,7 @@
 ---
 import 'hamburgers/dist/hamburgers.min.css';
 import 'aos/dist/aos.css';
+import ScrollMove from '@/components/ScrollMove.astro';
 interface Props {
   title: string;
 }
@@ -29,6 +30,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="w-full bg-[#FFFCF6]">
+    <ScrollMove />
     <slot />
   </body>
 </html>

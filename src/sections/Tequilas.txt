@@ -1,4 +1,5 @@
 ---
+import ImageTequila from '@/components/ImageTequila.astro';
 import { tequilas } from '@/data/tequilas';
 interface Tequilas {
   name: string;
@@ -8,33 +9,42 @@ interface Tequilas {
 }
 ---
 
+<!--
+  750 xl
+  480 l
+  350 m
+  250 s
+-->
 <section
-  class="Tequilas min-h-fvh py-12 lg:pt-[5vw] md:grid grid-cols-2 lg:grid-cols-4 md:px-[12vw] lh:max-h-hvh lg:pb-0 lg:overflow-hidden"
+  class="py-12 px-8 grid grid-cols-2 gap-y-8 landscape:grid-cols-4 landscape:max-md:px-4 landscape:md:px-[11vw]
+   landscape:xl:py-[7.708vw] landscape:2xl:py-[9.708vw] landscape:2xl:pb-[10.708vw]"
   id="tequilas"
 >
   {
     tequilas.map((tequila, index) => (
-      <figure
-        class="w-full flex flex-col items-center gap-y-5 mb-8 last:mb-0"
+      <div
+        class="flex flex-col items-center "
         data-aos="flip-right"
         data-aos-delay={100 * index}
       >
-        <img
-          src={`${tequila.img}.webp`}
-          alt={tequila.name}
-          class="w-auto h-[300px] lg:h-[65vh]"
+        <ImageTequila
+          class="h-[30vh] landscape:h-[35vw] landscape:lg:h-[70vh] landscape:2xl:h-[43.27vw] landscape:3xl:h-[43.2vw]  mb-2"
+          img={tequila.img}
+          name={tequila.name}
         />
-        <figcaption class="text-4xl h-[1.5em] flex flex-col justify-center text-[#5A4C4C] font-baskerville">
-          <p class=" mb-[0] leading-[.7]	">{tequila.name}</p>
+        <h2
+          class={` h-[2em] font-baskerville flex flex-col justify-center items-center text-xl s-ls:text-[3.5vw] s-ls:my-[.5em] lg:mt-0 leading-[.8] mb-2 lg-text-[2.60vw] 2xl:text-[2.4vw] 3xl:text-[2.3vw] lg:mb-[1.666vw] min-[1300px]:max-[1400px]:text-[2.5vw]`}
+        >
+          {tequila.name}
           {tequila.name2 && <span>{tequila.name2}</span>}
-        </figcaption>
+        </h2>
         <a
-          class="table font-trueno border border-[#5D6E78] text-[#5D6E78] text-xs lg:text-[0.7291vw] leading-8 px-3 hover:bg-[#5D6E78] hover:text-[#FFFCF6] transition-all duration-300 cursor-pointer"
+          class="table font-trueno border border-[#5D6E78] text-[#5D6E78] text-[10px] lg:text-[0.7291vw] leading-[2.5em]  px-2 hover:bg-[#5D6E78] hover:text-[#FFFCF6] transition-all duration-300 cursor-pointer"
           href={tequila.sheet}
         >
           Technical Sheet
         </a>
-      </figure>
+      </div>
     ))
   }
 </section>

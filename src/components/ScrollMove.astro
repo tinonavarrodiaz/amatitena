@@ -1,0 +1,57 @@
+---
+import Down from './icons/Down.astro';
+import Up from './icons/Up.astro';
+---
+
+<aside
+  class="fixed z-50 top-[50%] right-6 translate-y-[-50%] text-slate-500 flex flex-col items-center font-baskerville opacity-0 invisible transition-all duration-200"
+  id="scrollIndicator"
+>
+  <Up />
+  <span> Scroll</span>
+  <Down />
+</aside>
+<style>
+  #scrollIndicator.show {
+    visibility: visible;
+    opacity: 0.7;
+  }
+  span {
+    --size: 40px;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin: calc(var(--size) * 1.5) 0;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: var(--size);
+      background-color: currentColor;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(20%);
+    }
+    &::before {
+      bottom: 0;
+      top: unset;
+      transform: translateX(-50%) translateY(-20%);
+    }
+    /* text-transform: uppercase; */
+  }
+</style>
+<script>
+  const innerHeight = window.innerHeight;
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+    if (scrollPos >= innerHeight * 1.5) {
+      scrollIndicator?.classList.add('show');
+    } else {
+      scrollIndicator?.classList.remove('show');
+    }
+  });
+</script>
