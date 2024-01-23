@@ -51,7 +51,9 @@ import Up from './icons/Up.astro';
   const scrollIndicator = document.getElementById('scrollIndicator');
   const pathname = location.pathname;
   const scrollA = pathname === '/our-lands' ? 1 : 1.5;
+  alert(pathname);
   if (pathname === '/our-lands') {
+    alert(pathname);
     scrollIndicator?.classList.add('lands');
   }
   console.log(scrollA);
