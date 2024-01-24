@@ -13,7 +13,7 @@ export const tequilas = [
     name: 'Blanco',
     name2: 'de Origen',
     img: 'Origen',
-    sheet: '/pdf/origen.pdf',
+    Sheet: '/pdf/origen.pdf',
   },
   {
     name: 'Añejo',
