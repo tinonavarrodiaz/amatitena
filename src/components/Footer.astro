@@ -19,7 +19,9 @@ import Logo from './icons/Logo.astro';
   <div
     class="lg:h-[26.04vw] border-t border-b border-opacity-10 border-[rgb(255, 252, 246)] py-[5.20vw] lg:flex justify-between items-start"
   >
-    <Logo class="w-[20vw] lg:w-[8.125vw] h-auto block mb-[7vw] lg:mb-0" />
+    <a href="/" id="Logo">
+      <Logo class="w-[20vw] lg:w-[8.125vw] h-auto block mb-[7vw] lg:mb-0" />
+    </a>
     <div
       class="flex justify-between gap-x-[12vw] font-agenda text-[3vw] lg:text-[1.0416vw]"
     >
@@ -87,3 +89,12 @@ import Logo from './icons/Logo.astro';
     @apply block;
   }
 </style>
+<script>
+  const linkLogo = document.getElementById('Logo');
+  const loc = location.pathname;
+  linkLogo?.addEventListener('click', (e) => {
+    if (loc === '/') {
+      e.preventDefault();
+    }
+  });
+</script>
