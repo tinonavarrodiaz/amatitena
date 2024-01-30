@@ -12,6 +12,7 @@ const { name, img } = Astro.props;
   class="w-fvw aspect-[1920/1080] overflow-hidden relative mb-8 lg:mb-[3.38vw] last:pb-0"
   data-aos="fade-in"
   data-aos-duration="1500"
+  data-aos-offset="50"
 >
   <picture
     class="w-[calc(100%+2px] h-full object-cover object-center translate-x-[-1px] relative block"
@@ -29,7 +30,7 @@ const { name, img } = Astro.props;
     <img src={`/img/lands/${img}.jpg`} alt={name} />
   </picture>
   <h2
-    class="land-name absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] fornt-minion text-xl lg:text-[3.125vw] uppercase text-white"
+    class="land-name absolute top-[50%] left-[50%] w-[90%] text-center translate-x-[-50%] translate-y-[-50%] fornt-minion text-xl lg:text-[3.125vw] uppercase text-white"
   >
     {name}
   </h2>

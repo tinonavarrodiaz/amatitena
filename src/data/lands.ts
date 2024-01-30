@@ -1,10 +1,10 @@
 export const lands = [
   {
-    name: 'La clinica',
+    name: 'Llano de las Rosas',
     img: 'la-clinica',
   },
   {
-    name: 'Tequila',
+    name: 'Talixtaca',
     img: 'tequila',
   },
   {
@@ -12,15 +12,15 @@ export const lands = [
     img: 'santa-ana',
   },
   {
-    name: 'La Coronilla',
+    name: 'El Novillero',
     img: 'la-coronilla',
   },
   {
-    name: 'La Tripa',
+    name: 'Las Tripitas',
     img: 'la-tripa',
   },
   {
-    name: 'Palenque',
+    name: 'La Coronilla',
     img: 'palenque',
   },
 ];
