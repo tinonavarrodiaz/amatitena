@@ -4,6 +4,10 @@ export const menu1 = [
     link: '../#about-us',
   },
   {
+    title: 'Process',
+    link: '/process',
+  },
+  {
     title: 'Tequilas',
     link: '../#tequilas',
   },

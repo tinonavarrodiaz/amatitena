@@ -97,13 +97,21 @@ const { title } = Astro.props;
 </style>
 <script>
   import AOS from 'aos';
+  const windowHeight = window.innerHeight;
+
+  let offS;
+  offS = windowHeight <= 800 ? 0 : 300;
+
+  window.addEventListener('resize', () => {
+    window.innerHeight = windowHeight <= 800 ? 0 : 300;
+  });
   AOS.init({
     disable: false,
     startEvent: 'load',
     easing: 'ease-out-back',
     duration: 1800,
     delay: 150,
-    offset: 300,
+    offset: offS,
     // startEvent: 'DOMContentLoaded',
     useClassNames: true,
   });

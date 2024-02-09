@@ -1,0 +1,25 @@
+---
+import Footer from '@/components/Footer.astro';
+import Separator from '@/components/Separator.astro';
+import Layout from '@/layouts/Layout.astro';
+import HomeProcess from '@/sections/HomeProcess.astro';
+import Molino from '@/sections/Molino.astro';
+import Destillery from '@/sections/Destillery.astro';
+import TextProcess from '@/sections/TextProcess.astro';
+import TextProcess1 from '@/sections/TextProcess1.astro';
+import Bottle from '@/sections/Bottle.astro';
+---
+
+<Layout title="Our Lands">
+  <HomeProcess />
+  <TextProcess />
+  <TextProcess1 />
+  <Separator
+    img="separator3.webp"
+    className="h-[100px] lg:mt-[-3.906vw] xl:mt-[-3.906vw] 2xl:mt-[-3.906vw] z-0 landscape:max-lg:w-auto landscape:max-lg:max-h-[50px] lg:h-[16.14583vw]"
+  />
+  <Molino />
+  <Destillery />
+  <Bottle />
+  <Footer />
+</Layout>

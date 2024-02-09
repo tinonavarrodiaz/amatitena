@@ -1,8 +1,10 @@
 ---
 import { menu1 } from '@/data/menu1';
 interface Props {
-  page?: boolean;
+  className?: string;
 }
+
+const { className } = Astro.props;
 ---
 
 <nav>
@@ -16,7 +18,7 @@ interface Props {
     </span>
   </button>
   <ul
-    class="menu absolute font-agenda lg:static top-[75px] left-0 w-full bg-bgGris lg:bg-transparent max-h-0 lg:max-h-none lg:flex"
+    class={`menu ${className} absolute font-agenda lg:static top-[75px] left-0 w-full bg-bgGris lg:bg-transparent max-h-0 lg:max-h-none lg:flex`}
     id="Menu"
   >
     {
@@ -61,13 +63,16 @@ interface Props {
   .menu {
     @apply transition-all duration-500 lg:transition-none lg:text-[1.302vw] overflow-hidden lg:overflow-auto text-white lg:text-inherit;
 
+    &.process {
+      @apply text-white;
+    }
     &.is-active {
-      @apply max-h-[calc(3.5em*4)];
+      @apply max-h-[calc(3.5em*6)];
     }
     li {
       @apply lg:px-[1.1693vw] tracking-[2px] leading-10 lg:leading-normal;
     }
-    li:nth-child(4) {
+    li:nth-child(5) {
       @apply lg:pr-[2.864vw];
     }
     li:last-child {

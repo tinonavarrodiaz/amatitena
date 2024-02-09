@@ -1,0 +1,57 @@
+---
+import Scroll from '@/components/Scroll.astro';
+---
+
+<section
+  class="relative w-fvw h-fvh flex flex-col items-center justify-center text-text px-6 lg:px-[10.41vw] max-[340px]:pt-16 max-[340px]:mb-20"
+  id="about-us"
+>
+  <p
+    class="text-center tracking-[3px] leading-[1.3em] text-[1.5em] landscape:max-md:text-[2vw] lg:text-[2vw] min-[1300px]:max-[1400px]:text-[1.5vw] max-md:px-2"
+    data-aos="fade-left"
+  >
+    Our fields, situated along the breath-taking landscape of the valleys, are
+    cultivated with the best blue agaves. We are grateful for the fruits that
+    Mother Earth has given us, and it’s our job to preserve and take care of
+    them. The people involved in the process, not only appreciate this gift but
+    gives it more value because it’s also the result of years of tradition.
+    Generations after generations of Master Distillers, Jimadores, Artisans,
+    Technicians, Handcrafters along with other different professions, take part
+    in the everyday tasks of the production of tequila.
+  </p>
+  <Scroll
+    id="next"
+    href="#about-us1"
+    className="bottom-20 lg:bottom-16 hidden"
+  />
+  <Scroll id="prev" href="#Home" className="top-24 hidden" />
+</section>
+<style>
+  br {
+    @apply hidden md:block;
+  }
+</style>
+<!-- <script>
+  const section = document.getElementById('about-us') as HTMLElement;
+  const prev = section?.querySelector('.prev') as HTMLAnchorElement;
+  const next = section?.querySelector('.next') as HTMLAnchorElement;
+  section.addEventListener('wheel', (e) => {
+    if (e.deltaY < 0) {
+      prev?.click();
+    } else {
+      next?.click();
+    }
+  });
+  //@ts-ignore
+  const mc = new Hammer(section);
+  //@ts-ignore
+  mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  mc.on('panup pandown', (e: any) => {
+    // console.log(e.deltaY);
+    if (e.deltaY > 0) {
+      prev?.click();
+    } else {
+      next?.click();
+    }
+  });
+</script> -->
