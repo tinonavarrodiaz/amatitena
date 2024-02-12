@@ -106,7 +106,7 @@ const { title } = Astro.props;
     window.innerHeight = windowHeight <= 800 ? 0 : 300;
   });
   AOS.init({
-    disable: false,
+    disable: 'mobile',
     startEvent: 'load',
     easing: 'ease-out-back',
     duration: 1800,
