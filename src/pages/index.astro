@@ -9,6 +9,7 @@ import Tequilas from '@/sections/Tequilas.astro';
 import Master from '@/sections/Master.astro';
 import Footer from '@/components/Footer.astro';
 import Buy from '@/sections/Buy.astro';
+import Popup from '@/sections/Popup.astro';
 ---
 
 <Layout title="Amatiteña">
@@ -27,4 +28,40 @@ import Buy from '@/sections/Buy.astro';
     <Buy />
   </main>
   <Footer />
+  <Popup />
 </Layout>
+<script>
+  const home = document.getElementById('Home') as HTMLElement;
+  const popup = document.getElementById('popup') as HTMLElement;
+  const homeOffsetTop = home.offsetTop;
+  const closePopup = popup.querySelector('#close') as HTMLAnchorElement;
+  const download = popup.querySelector('#download') as HTMLAnchorElement;
+  window.addEventListener('scroll', () => {
+    const st = window.scrollY;
+    console.log(st, homeOffsetTop);
+    if (st >= homeOffsetTop && !popup.classList.contains('no-show')) {
+      document.documentElement.classList.add('stop-scrolling');
+      document.body.classList.add('stop-scrolling');
+      window.scrollTo({
+        top: homeOffsetTop,
+        left: 0,
+        behavior: 'instant',
+      });
+      popup.classList.add('show');
+    }
+  });
+  closePopup.addEventListener('click', () => {
+    popup.classList.remove('show');
+    popup.classList.add('no-show');
+    document.documentElement.classList.remove('stop-scrolling');
+    document.body.classList.remove('stop-scrolling');
+  });
+  download.addEventListener('click', () => {
+    setTimeout(() => {
+      popup.classList.remove('show');
+      popup.classList.add('no-show');
+      document.documentElement.classList.remove('stop-scrolling');
+      document.body.classList.remove('stop-scrolling');
+    }, 500);
+  });
+</script>

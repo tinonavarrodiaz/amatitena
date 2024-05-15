@@ -1,0 +1,140 @@
+<div class="popup" id="popup">
+  <div class="popup__content">
+    <div class="popup__header">
+      <img class="w-3/12 lg:w-[7.96vw]" src="/logo_popup.svg" alt="Logo" />
+      <div class="popup__close-container">
+        <img src="close.svg" alt="close" class="popup__close" id="close" />
+      </div>
+    </div>
+    <div
+      class="popup__body text-[#594b4b] font-agenda px-6 lg:px-[12.5vw] mt-20 lg:mt-[10.78VW] 2xl:mt-[5vw] tracking-[3px] lg:text-[1.35vw]"
+    >
+      <h2 class="lg:pl-[1.2vw]">Barrancas de Amatitán</h2>
+      <h3
+        class="font-minion text-3xl mb-8 lg:text-[3.5vw] 2xl:text-[3vw] lg:leading-[1.1em] italic"
+      >
+        Take a look at our newest creation. Tequila Amatiteña Barrancas Edition
+      </h3>
+      <p class="lg:text-justify lg:px-[1.2vw]">
+        The production of Amatiteña Barrancas is a celebration of life, hard
+        work, dedication, and innovation. Since its inception in May 2023 to
+        date, it has become a seasonal tequila with an annual production in
+        spring. Every drop of this special elixir carries with it the spirit of
+        the Barrancas de Amatitán, a tribute to family tradition and the
+        generosity of the land that gave birth to it.
+      </p>
+      <div
+        class="popup__footer flex items-center justify-between mt-12 lg:px-[1.2vw]"
+      >
+        <div class="info">
+          <div class="info__email mb-2">
+            <a href="mailto:info@sipamatitan.mx">info@sipamatitan.mx</a>
+          </div>
+          <ul class="social flex items-center gap-x-4">
+            <li class="block w-4 h-4">
+              <a
+                class="block w-4 h-4"
+                href="https://www.facebook.com/sipamatitan"
+                ><img
+                  class="block w-4 h-4"
+                  src="/facebook.svg"
+                  alt="facebook icon"
+                /></a
+              >
+            </li>
+            <li class="block w-4 h-4">
+              <a
+                class="block w-4 h-4"
+                href="https://www.instagram.com/sip_amatitan/"
+                ><img
+                  class="block w-4 h-4"
+                  src="/instagram.svg"
+                  alt="instagram icon"
+                /></a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="/pdf/book.pdf" class="download" id="download" download=""
+          >Download PDF</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .popup {
+    background: rgba(#000, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    &__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      background: #eeece2;
+      border-radius: 10px;
+      overflow-y: auto;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4em;
+      border-bottom: 1px solid rgba(#594b4b, 0.5);
+      padding-left: 12.68%;
+      @media screen and (min-width: 1024px) {
+        padding-left: 4.68%;
+        height: 5.75vw;
+      }
+    }
+    &__close-container {
+      width: 30.18%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid rgba(#594b4b, 0.5);
+      @media screen and (min-width: 1024px) {
+        width: 12.18%;
+      }
+      img {
+        width: 1.3em;
+        height: 1.3em;
+        cursor: pointer;
+        @media screen and (min-width: 1024px) {
+          width: 1.71vw;
+          height: 1.71vw;
+        }
+      }
+    }
+    .download {
+      padding: 0.5em 1em;
+      text-decoration: none;
+      font-size: 1.1em;
+      cursor: pointer;
+      border: 1px solid rgba(#594b4b, 0.5);
+      @media screen and (min-width: 1024px) {
+        font-size: 1.5vw;
+      }
+      &:hover {
+        background: rgba(#594b4b, 1);
+        color: #fff;
+      }
+    }
+  }
+</style>
