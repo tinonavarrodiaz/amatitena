@@ -7,15 +7,15 @@
       </div>
     </div>
     <div
-      class="popup__body text-[#594b4b] font-agenda px-6 lg:px-[12.5vw] mt-20 lg:mt-[10.78VW] 2xl:mt-[5vw] tracking-[3px] lg:text-[1.35vw]"
+      class="popup__body text-[#594b4b] font-agenda px-6 lg:px-[12.5vw] mt-20 lg:mt-[3.78VW] min-[1600px]:max-[1700px]:mt-[8.5vw] min-[1800px]:mt-[5vw] tracking-[3px] lg:text-[1.35vw] mb-8 lg:mb-16"
     >
-      <h2 class="lg:pl-[1.2vw]">Barrancas de Amatitán</h2>
+      <h2 class="max-md:text-[1em] lg:pl-[1.2vw]">Barrancas de Amatitán</h2>
       <h3
-        class="font-minion text-3xl mb-8 lg:text-[3.5vw] 2xl:text-[3vw] lg:leading-[1.1em] italic"
+        class="font-minion text-xl mb-8 lg:text-[3vw] 2xl:text-[3vw] lg:leading-[1.1em] italic"
       >
         Take a look at our newest creation. Tequila Amatiteña Barrancas Edition
       </h3>
-      <p class="lg:text-justify lg:px-[1.2vw]">
+      <p class="lg:text-justify lg:px-[1.2vw] max-md:text-[1em]">
         The production of Amatiteña Barrancas is a celebration of life, hard
         work, dedication, and innovation. Since its inception in May 2023 to
         date, it has become a seasonal tequila with an annual production in
@@ -24,13 +24,19 @@
         generosity of the land that gave birth to it.
       </p>
       <div
-        class="popup__footer flex items-center justify-between mt-12 lg:px-[1.2vw]"
+        class="popup__footer flex items-center max-[380px]:mb-8 max-[380px]:gap-y-6 max-[380px]:flex-col justify-between mt-12 lg:mt-6 2xl:mt-12 lg:px-[1.2vw]"
       >
         <div class="info">
           <div class="info__email mb-2">
-            <a href="mailto:info@sipamatitan.mx">info@sipamatitan.mx</a>
+            <a
+              href="mailto:info@sipamatitan.mx"
+              class="max-[380px]:text-[1em] max-md:text-[.8em]"
+              >info@sipamatitan.mx</a
+            >
           </div>
-          <ul class="social flex items-center gap-x-4">
+          <ul
+            class="social flex items-center gap-x-4 max-[380px]:justify-center max-[380px]:mt-6"
+          >
             <li class="block w-4 h-4">
               <a
                 class="block w-4 h-4"
@@ -55,8 +61,11 @@
             </li>
           </ul>
         </div>
-        <a href="/pdf/book.pdf" class="download" id="download" download=""
-          >Download PDF</a
+        <a
+          href="/pdf/DIGITAL-BRANDBOOK-AMATITEÑA-BARRANCAS.pdf"
+          class="download max-md:!text-[1em]"
+          id="download"
+          download="">Download PDF</a
         >
       </div>
     </div>
@@ -83,7 +92,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      height: 90%;
+      height: auto;
+      max-height: 90%;
       transform: translate(-50%, -50%);
       width: 90%;
       background: #eeece2;
